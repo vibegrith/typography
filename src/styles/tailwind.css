@@ -4,4 +4,10 @@
 
 @layer base{
 
+  
 }
+
+.background {
+    background-image: url("bg-img.jpg");
+    background-color: black;
+  }
