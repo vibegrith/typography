@@ -1,15 +1,115 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Hero from '../components/Hero.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+	
+	<section class="relative h-screen bg-cover bg-center" style="background-image: url('/public/img/bg-raw.png');">
+  <div class="flex items-center justify-center h-full">
+    <img src="/public/img/raw.svg" alt="typograph">
+  </div>
+     <div class="absolute bottom-0 left-0 p-4 md:p-8 text-white z-10">
+    <h2 class="text-xl md:text-3xl font-semibold">RawCut</h2>
+    <p class="mt-2 text-sm md:text-base">By Vibe Grith Mobeck</p>
+  </div>
+</section>
+
+<section>
+	<div>
+		<div class="flex justify-center pt-20">
+		<img src="/public/img/line.svg" alt="line">
+		</div>
+		<p id="About" class="text-center pt-10 text-white">Raw-Cut is a graphic font with a modern take on the 70´s Lino-cut. <br> It gives an artistic and rustic feel, combining modern graphics with the retro style of Lino-Cut,
+        </p>
+        <div class="flex justify-center pt-10">
+		<img src="/public/img/line1.svg" alt="line">
+		</div>
+	</div>
+</section>
+
+<section class="pt-20">
+	<div class="grid grid-cols-1 grid-rows-2 gap-6">
+		<div class="flex justify-center gap-6">
+			<img src="/public/img/r1.svg" alt="type r">
+			<img src="/public/img/a1.svg" alt="type c">
+			<img src="/public/img/w1.svg" alt="type a">
+		</div>
+		<div class="flex justify-center gap-6">
+			<img src="/public/img/c1.svg" alt="type u">
+			<img src="/public/img/u1.svg" alt="type w">
+			<img src="/public/img/t1.svg" alt="type t">
+		</div>
+
+	</div>
+</section>
+    
+
+<section>
+        <div class="flex justify-center pt-20 ">
+		<img src="/public/img/line1.svg" alt="line">
+		</div>
+		<div class="grid grid-rows-2 gap-6">
+		<div class="grid grid-cols-2">
+			<img class="pl-20 pt-10" src="/public/img/poster-type.png" alt="plakat">
+		<div class="px-20">
+				<h2 id="Use" class="pt-10 pb-20 text-3xl text-white">RawCut by Vibe</h2>
+			<p class="text-xl text-white">RawCut would be well-suited for artistic projects, branding, or visual designs where a handcrafted, rustic feel is desired. It would work well in posters, book covers, or other media seeking a touch of authenticity and a connection to traditional printmaking. </p>
+			<div class="flex justify-center pt-20 ">
+		    <img src="/public/img/line1.svg" alt="line">
+		    </div>
+		</div>
+		</div>
+		<div class="grid grid-cols-2">
+			<img class="pl-20 pt-10" src="/public/img/typo.png" alt="plakat">
+			<div class="px-20">
+			<p class="text-xl pt-10 text-white">RawCut has a bold, hand-carved aesthetic, inspired by linocut printing techniques. Each letter features rough, uneven lines, giving it an organic, artisanal look. The texture within the letters shows deliberate imperfections, characteristic of relief printing methods like linoleum cuts, where the inked surface captures every cut and groove, resulting in a raw, expressive style.
+<br> <br>Its imperfect lines and textural details evoke a sense of creativity and craftsmanship, making it ideal for conveying messages with a personal or artistic touch. </p>
+			<div class="flex justify-center pt-20 ">
+		    <img src="/public/img/line1.svg" alt="line">
+		    </div>
+            </div>
+		</div>
+		</div>
+</section>
+
+<section>
+	<div class="flex justify-center pt-20">
+		<img src="/public/img/line.svg" alt="line">
+		</div>
+      <div class="grid grid-cols-2">
+		    <div class="">
+			<img class="pl-20 pt-10" src="/public/img/book-sketch.png" alt="sketch">
+
+			<div class="grid grid-cols-2 items-center self-center gap-6">
+			<div>
+			<img class="pl-20 pt-10 flex flex-col justify-self-center" src="/public/img/moodboard.png" alt="moodboard">
+			<img class="pl-20 pt-10" src="/public/img/proces-a.svg" alt="proces-illustrator">
+			</div>
+		    <img class=" pt-10" src="/public/img/illustrator.png" alt="illustrator">
+			</div>
+            </div>
+			
+			<div class="px-20">
+			<h2 id="Process" class="pt-10 pb-20 text-3xl text-white">Process</h2>
+			<p class="text-white text-xl">To create RawCut, I began by exploring various linocuts that used typography. I was inspired by the raw and edgy quality of linocut prints, aiming to develop a typeface that could stand alone as a strong graphic element. I first sketched the letters by hand, transferred them onto a linoleum block, and carved them out.
+
+            <br> <br>Next, I printed the letters onto paper, experimenting with different levels of pressure to achieve the desired effect. Once I was satisfied, I uploaded the print to Photoshop, isolated the letters, and then used Illustrator to trace the image. I went through multiple iterations of each letter to refine the overall look until it matched my vision.
+
+               <br><br>With the letters complete, I started combining them into different words, adjusting the sizing and making small refinements. The final result is what you see in my hero unit.
+             </p>
+			<div class="flex justify-center pt-20 ">
+		    <img src="/public/img/line1.svg" alt="line">
+		    </div>
+			<img class="pt-10" src="/public/img/lino-cut.png" alt="linoliumstryk">
+            </div>
+		</div>
+		</div>
+		<div class="flex justify-center pt-20 ">
+		    <img src="/public/img/line1.svg" alt="line">
+		    </div>
+</section>
 </MainLayout>

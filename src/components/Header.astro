@@ -1,42 +1,33 @@
 ---
 ---
 <div x-data="{ showmenu: false }" class=" fixed top-0 w-full z-50" >
-    <div id="navbar" class="justify-between lg:justify-around items-center">
-  <nav id="desktopmenu" class=" hidden lg:block items-center background text-[var(--secondary-color-100)] p-0 border-t border-b">
+    <div id="navbar" class="justify-between lg:justify-end items-center bg-slate-600 bg-opacity-10">
+  <nav id="desktopmenu" class=" hidden lg:block items-center  p-0">
       <div class="container mx-auto">
-        <ul class="flex flex-row items-center">
-          <li class="relative flex-1 text-center">
-            <a href="/" class="block py-6 px-4 border-l  border-r border-[var(--secondary-color-100)] transition-all	 hover:line-through">FORSIDE</a>
+        <ul class="flex flex-row justify-end text-white">
+          <li class="relative text-center">
+            <a href="/#About" class="block py-6 px-4 hover:text-[var(--accent-color-100)] ">About</a>
           </li>
-          <li class="relative flex-1 text-center">
-            <a href="/#info" class="block py-6 px-4 border-r border-[var(--secondary-color-100)] transition-all	 hover:line-through">INFO</a>
+          <li class="relative flex text-center">
+            <a href="/#Use" class="block py-6 px-4 hover:text-[var(--accent-color-100)]">Use</a>
           </li>
-          <li class="relative flex-1 text-center">
-            <a href="/howto" class="block py-6 px-4 border-r border-[var(--secondary-color-100)] transition-all	 hover:line-through">HOW TO</a>
-          </li>
-          <li class="relative flex-1 text-center">
-            <a href="/resourcer" class="block">RESSOURCER</a>
-          </li>
-          <li class="relative flex-1 text-center">
-            <a href="/registrering" class="block py-6 px-4 border-r font-bold bg-[var(--accent-color-300)] text-[var(--primary-color-100)] border-[var(--secondary-color-100)] transition-all hover:line-through hover:bg-[var(--accent-color-200)] hover:text-[var(--secondary-color-100)]">DELTAG</a>
+          <li class="relative flex text-center">
+            <a href="/#Process" class="block py-6 px-4 hover:text-[var(--accent-color-100)]">Proces</a>
           </li>
         </ul>
       </div>
     </nav>
-    <button id="burgermenu" class="lg:hidden text-[var(--secondary-color-100)] self-center pt-3 pl-3 z-50 " x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+    <button id="burgermenu" class="lg:hidden text-white self-center pt-3 pl-3 z-50 " x-on:click="showmenu = ! showmenu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
   </svg>
   </button>
   
   <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
   x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-  <ul class="text-[var(--secondary-color-100)]" >
-    <a href="/"><li class="text-center py-2 border-y-2 ">FORSIDE</li></a>
-    <a href="/#info"><li class="text-center py-2 border-b-2 ">INFO</li></a>
-    <a href="/howto"><li class="text-center py-2 border-b-2 ">HOW TO</li></a>
-    <a href="/resourcer"><li class="text-center py-2 border-b-2 ">RESSOURCER</li></a>
-    <a href="/registrering"><li class="text-center py-2 border-b-2 font-bold bg-[var(--accent-color-300)] text-[var(--primary-color-100)]">DELTAG</li></a>
-  </ul>
+  <ul class="text-gray-600" >
+    <a href="/"><li class="text-center py-2 border-y-2 ">About</li></a>
+    <a href="/#info"><li class="text-center py-2 border-b-2 ">Use</li></a>
+    <a href="/howto"><li class="text-center py-2 border-b-2 ">Proces</li></a>
   </nav>
   </div>
   
