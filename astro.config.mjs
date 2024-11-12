@@ -5,6 +5,5 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  outDir: "dist",
   integrations: [tailwind(), alpinejs()],
 });
