@@ -10,7 +10,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 	
 	<section class="relative h-screen bg-cover bg-center" style="background-image: url(/bg-raw.png);">
   <div class="flex items-center justify-center h-full">
-    <img src="/raw.svg" alt="typograph">
+    <img class="puff-in-center" src="/raw.svg" alt="typograph">
   </div>
      <div class="absolute bottom-0 left-0 p-4 md:p-8 z-10">
     <h2 class="text-xl md:text-3xl font-semibold">RawCut</h2>
@@ -46,10 +46,21 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 	</div>
 </section>
-    
 
+
+	<div id="Use" class="pt-10 overflow-clip">
+		<section id="horisontalscrollsection" class="h-[300vw]">
+			<ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
+			<li class=" relative flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img src="/poster-type.png" alt="poster" class="w-screen" alt="poster" /><div class="absolute grid grid-cols-3 items-center"><p class="col-start-3 text-white text-xl  backdrop-filter rounded-md backdrop-blur-md p-5">RawCut would be well-suited for artistic projects, branding, or visual designs where a handcrafted, rustic feel is desired. It would work well in posters, book covers, or other media seeking a touch of authenticity and a connection to traditional printmaking.</p></div></li>
+			<li class="relative flex w-[100vw] items-center justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img src="/t-shirt.png" alt="t-shirt" class="w-2/3" alt="foto" /><div class="absolute grid grid-cols-3 justify-center pt-10"><p class="col-start-2 text-gray-900 text-xl backdrop-filter rounded-md backdrop-blur-md p-5 ">RawCut has a bold, hand-carved aesthetic, inspired by linocut printing techniques. Each letter features rough, uneven lines, giving it an organic, artisanal look. The texture within the letters shows deliberate imperfections, characteristic of relief printing methods like linoleum cuts, where the inked surface captures every cut and groove, resulting in a raw, expressive style, perfect for t-shirt print.</p></div></li>
+			<li class="relative flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img src="/typo.png" alt="layout" class="w-screen" alt="foto" /><div class="absolute grid grid-cols-3 justify-center"><p class="col-start-1 text-white text-xl  backdrop-filter rounded-md backdrop-blur-md p-5 ">RawCut would be well-suited for artistic projects, branding, or visual designs where a handcrafted, rustic feel is desired. It would work well in posters, book covers, or other media seeking a touch of authenticity and a connection to traditional printmaking.</p></div></li>
+		   </ul>
+		</section>
+	</div>
+    
+	<!--  
 <section>
-        <div class="flex justify-center lg:pt-20 ">
+        <div class="flex justify-center ">
 		<img class="pt-10 pl-8 lg:pt-0 lg:pl-0" src="/line1.svg" alt="line">
 		</div>
 		<div class="grid lg:grid-rows-2 gap-6">
@@ -78,6 +89,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</div>
 		</div>
 </section>
+-->
 
 <section>
 	<div class="flex justify-center lg:pt-20">
@@ -116,3 +128,17 @@ import thumbsup from "../assets/images/thumbsup.png";
 		    </div>
 </section>
 </MainLayout>
+
+<script>
+
+		/* Import af Motion One biblioteket */
+			import { animate, stagger, inView, scroll, timeline, ScrollOffset } from "motion";
+	
+	/* Horisontal scroll sektion */
+	scroll(
+	animate("#horisontalliste", {
+		transform: ["none", "translateX(-300vw)"]
+	}),
+	{ target: document.querySelector("#horisontalscrollsection") }
+	); 
+</script>
